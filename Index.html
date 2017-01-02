@@ -1,0 +1,114 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <title>Prueba</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/global.css" rel="stylesheet" />
+</head>
+
+<body ng-app="app" ng-cloak style="background-color: #F2DF9A;">
+    <div class="col-md-12" style="padding:0px"> 
+        <nav class="navbar navbar-default fixed" style="background-color:#E5C44D;border:0px;border-radius:0px;top: 0px;">
+          <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="#">PRUEBA</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <form class="navbar-form navbar-right">
+                    <div class="form-group">
+                      <input type="text" class="form-control" placeholder="Search">
+                    </div>
+                    <button type="submit" class="btn btn-default">Submit</button>
+                </form> 
+                <ul class="nav navbar-nav" style="float:right">
+                    <li class="active"><a href="#ent1">Entrada 1 <span class="sr-only">(current)</span></a></li>
+                    <li><a href="#ent2">Entrada 2</a></li>
+                    <li><a href="#ent3">Entrada 3</a></li>
+                </ul>
+             
+            </div><!-- /.navbar-collapse -->
+          </div><!-- /.container-fluid -->
+        </nav>
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-12" ng-controller="mainController">
+        <div class="col-md-6 col-md-offset-3" style="text-align:center"> <h1> Blog de Prueba</h1></div>
+        <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="col-xs-12 col-sm-12 col-md-12">
+                <div id="ent" class="col-xs-12 col-sm-12 col-md-12" style="border-bottom:1px solid orange" ng-repeat="post in Blog">
+                    <h3> {{post.Title}} </h3>
+                    <h6> Dia de entrada: {{post.Date | date:"dd-MM-yyyy"}} </h6>
+                    <div class="col-xs-12 col-sm-12 col-md-12">
+                        <p style="text-align: justify;"> {{post.Content}} </p>
+                    </div>
+                </div>
+                <!--<div id="ent1" class="col-xs-12 col-sm-12 col-md-12" style="border-bottom:1px solid orange">
+                    <h3> Titulo 1 </h3>
+                    <h6> Dia de entrada: 25-10-2016 </h6>
+                    <div class="col-xs-12 col-sm-12 col-md-12">
+                        <p style="text-align: justify;"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc placerat pellentesque lacus vel varius. In in quam vehicula felis semper pellentesque. Vivamus quis tellus ut nisl hendrerit pulvinar. Sed interdum ac turpis id consectetur. Praesent non ultricies lorem. Curabitur molestie ac lacus vitae sollicitudin. Mauris sed viverra lorem. In magna ante, tincidunt eget aliquam nec, pretium id nulla. Quisque eget est ac risus congue dignissim. Integer porttitor semper risus, ut viverra quam bibendum nec. Mauris vulputate cursus vehicula. Phasellus mollis luctus tortor, sed rutrum libero mattis accumsan. Ut condimentum nisl eget turpis malesuada, eu molestie tortor luctus. Fusce suscipit neque nibh, vel vehicula ipsum iaculis aliquam. Sed vestibulum augue lacus, eu pharetra sem commodo sed. Quisque vulputate, magna eu vehicula fringilla, dui purus pretium lacus, ut bibendum augue leo et quam.
+
+Donec in lorem volutpat est viverra mattis. Donec finibus varius nunc et tincidunt. Nulla interdum eleifend tortor, et ultricies eros aliquet ac. Quisque quis convallis leo. Vivamus pulvinar arcu a felis interdum semper. Maecenas molestie tincidunt nunc egestas venenatis. Nunc ante est, auctor quis faucibus vel, luctus rhoncus nisl. Nulla placerat dictum enim. Nunc tincidunt felis sit amet metus varius commodo.
+
+Fusce consequat dignissim ipsum. Nullam et eros eleifend, mollis odio et, molestie augue. Aenean posuere nisl at elit convallis, sit amet tempor tellus molestie. Phasellus nec iaculis leo. Etiam pulvinar ex ac volutpat cursus. Aenean sit amet mauris faucibus, ullamcorper justo non, dictum ipsum. Sed tempor porttitor dolor a pulvinar. Nunc blandit eleifend ex et molestie.
+
+Curabitur congue, mi quis cursus accumsan, lacus est dictum tellus, id mattis risus arcu nec diam. Aenean non finibus ex. In eu massa magna. Vestibulum orci justo, congue eu tortor in, malesuada blandit purus. Morbi varius est lacinia, aliquet sem vel, congue eros. Pellentesque aliquet sit amet sapien sed mattis. Curabitur tincidunt viverra neque quis elementum. Pellentesque dictum nisi arcu, a varius nibh vulputate pretium. Vestibulum at dolor vitae velit gravida ultricies. Etiam porttitor leo eu varius laoreet. Vivamus ut lorem malesuada, volutpat odio nec, sodales lacus. Praesent mattis suscipit libero, eget vestibulum mauris vulputate ac. Phasellus eleifend purus ac diam finibus, quis ullamcorper nisi mollis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+
+Nam lobortis libero eu convallis tempor. Integer elementum, libero in placerat pellentesque, risus ligula fringilla massa, vitae cursus neque mauris quis felis. Nullam ut lacus lobortis, pellentesque sapien in, mollis ante. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nulla sit amet urna nec metus accumsan suscipit dictum sit amet orci. Etiam ut nunc nec justo efficitur aliquam et sit amet mauris. Vestibulum at dui tellus. Ut a tempor dui, vitae iaculis orci. Mauris augue orci, placerat et interdum ut, luctus eu nunc. Praesent dignissim enim quam, vitae dapibus ipsum gravida sit amet. Suspendisse potenti. Quisque iaculis, ante in pharetra ultricies, risus magna sodales lorem, ac blandit sapien ante ultricies odio. Cras ut tempor lacus. Sed in diam tempor, condimentum nibh sit amet, posuere libero. In sit amet tristique leo.</p>
+                    </div>
+                </div>
+                <div id="ent2" class="col-xs-12 col-sm-12 col-md-12" style="border-bottom:1px solid orange"> 
+                    <h3> Titulo 2 </h3>
+                    <h6> Dia de entrada: 15-10-2016 </h6>
+                    <div class="col-xs-12 col-sm-12 col-md-12">
+                        <p style="text-align: justify;"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc placerat pellentesque lacus vel varius. In in quam vehicula felis semper pellentesque. Vivamus quis tellus ut nisl hendrerit pulvinar. Sed interdum ac turpis id consectetur. Praesent non ultricies lorem. Curabitur molestie ac lacus vitae sollicitudin. Mauris sed viverra lorem. In magna ante, tincidunt eget aliquam nec, pretium id nulla. Quisque eget est ac risus congue dignissim. Integer porttitor semper risus, ut viverra quam bibendum nec. Mauris vulputate cursus vehicula. Phasellus mollis luctus tortor, sed rutrum libero mattis accumsan. Ut condimentum nisl eget turpis malesuada, eu molestie tortor luctus. Fusce suscipit neque nibh, vel vehicula ipsum iaculis aliquam. Sed vestibulum augue lacus, eu pharetra sem commodo sed. Quisque vulputate, magna eu vehicula fringilla, dui purus pretium lacus, ut bibendum augue leo et quam.
+
+Donec in lorem volutpat est viverra mattis. Donec finibus varius nunc et tincidunt. Nulla interdum eleifend tortor, et ultricies eros aliquet ac. Quisque quis convallis leo. Vivamus pulvinar arcu a felis interdum semper. Maecenas molestie tincidunt nunc egestas venenatis. Nunc ante est, auctor quis faucibus vel, luctus rhoncus nisl. Nulla placerat dictum enim. Nunc tincidunt felis sit amet metus varius commodo.
+
+Fusce consequat dignissim ipsum. Nullam et eros eleifend, mollis odio et, molestie augue. Aenean posuere nisl at elit convallis, sit amet tempor tellus molestie. Phasellus nec iaculis leo. Etiam pulvinar ex ac volutpat cursus. Aenean sit amet mauris faucibus, ullamcorper justo non, dictum ipsum. Sed tempor porttitor dolor a pulvinar. Nunc blandit eleifend ex et molestie.
+
+Curabitur congue, mi quis cursus accumsan, lacus est dictum tellus, id mattis risus arcu nec diam. Aenean non finibus ex. In eu massa magna. Vestibulum orci justo, congue eu tortor in, malesuada blandit purus. Morbi varius est lacinia, aliquet sem vel, congue eros. Pellentesque aliquet sit amet sapien sed mattis. Curabitur tincidunt viverra neque quis elementum. Pellentesque dictum nisi arcu, a varius nibh vulputate pretium. Vestibulum at dolor vitae velit gravida ultricies. Etiam porttitor leo eu varius laoreet. Vivamus ut lorem malesuada, volutpat odio nec, sodales lacus. Praesent mattis suscipit libero, eget vestibulum mauris vulputate ac. Phasellus eleifend purus ac diam finibus, quis ullamcorper nisi mollis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+
+Nam lobortis libero eu convallis tempor. Integer elementum, libero in placerat pellentesque, risus ligula fringilla massa, vitae cursus neque mauris quis felis. Nullam ut lacus lobortis, pellentesque sapien in, mollis ante. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nulla sit amet urna nec metus accumsan suscipit dictum sit amet orci. Etiam ut nunc nec justo efficitur aliquam et sit amet mauris. Vestibulum at dui tellus. Ut a tempor dui, vitae iaculis orci. Mauris augue orci, placerat et interdum ut, luctus eu nunc. Praesent dignissim enim quam, vitae dapibus ipsum gravida sit amet. Suspendisse potenti. Quisque iaculis, ante in pharetra ultricies, risus magna sodales lorem, ac blandit sapien ante ultricies odio. Cras ut tempor lacus. Sed in diam tempor, condimentum nibh sit amet, posuere libero. In sit amet tristique leo.</p>
+                    </div>
+                </div>
+                <div id="ent3" class="col-xs-12 col-sm-12 col-md-12" style="border-bottom:1px solid orange">
+                    <h3> Titulo 3 </h3>
+                    <h6> Dia de entrada: 05-10-2016 </h6>
+                    <div class="col-xs-12 col-sm-12 col-md-12">
+                        <p style="text-align: justify;"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc placerat pellentesque lacus vel varius. In in quam vehicula felis semper pellentesque. Vivamus quis tellus ut nisl hendrerit pulvinar. Sed interdum ac turpis id consectetur. Praesent non ultricies lorem. Curabitur molestie ac lacus vitae sollicitudin. Mauris sed viverra lorem. In magna ante, tincidunt eget aliquam nec, pretium id nulla. Quisque eget est ac risus congue dignissim. Integer porttitor semper risus, ut viverra quam bibendum nec. Mauris vulputate cursus vehicula. Phasellus mollis luctus tortor, sed rutrum libero mattis accumsan. Ut condimentum nisl eget turpis malesuada, eu molestie tortor luctus. Fusce suscipit neque nibh, vel vehicula ipsum iaculis aliquam. Sed vestibulum augue lacus, eu pharetra sem commodo sed. Quisque vulputate, magna eu vehicula fringilla, dui purus pretium lacus, ut bibendum augue leo et quam.
+
+Donec in lorem volutpat est viverra mattis. Donec finibus varius nunc et tincidunt. Nulla interdum eleifend tortor, et ultricies eros aliquet ac. Quisque quis convallis leo. Vivamus pulvinar arcu a felis interdum semper. Maecenas molestie tincidunt nunc egestas venenatis. Nunc ante est, auctor quis faucibus vel, luctus rhoncus nisl. Nulla placerat dictum enim. Nunc tincidunt felis sit amet metus varius commodo.
+
+Fusce consequat dignissim ipsum. Nullam et eros eleifend, mollis odio et, molestie augue. Aenean posuere nisl at elit convallis, sit amet tempor tellus molestie. Phasellus nec iaculis leo. Etiam pulvinar ex ac volutpat cursus. Aenean sit amet mauris faucibus, ullamcorper justo non, dictum ipsum. Sed tempor porttitor dolor a pulvinar. Nunc blandit eleifend ex et molestie.
+
+Curabitur congue, mi quis cursus accumsan, lacus est dictum tellus, id mattis risus arcu nec diam. Aenean non finibus ex. In eu massa magna. Vestibulum orci justo, congue eu tortor in, malesuada blandit purus. Morbi varius est lacinia, aliquet sem vel, congue eros. Pellentesque aliquet sit amet sapien sed mattis. Curabitur tincidunt viverra neque quis elementum. Pellentesque dictum nisi arcu, a varius nibh vulputate pretium. Vestibulum at dolor vitae velit gravida ultricies. Etiam porttitor leo eu varius laoreet. Vivamus ut lorem malesuada, volutpat odio nec, sodales lacus. Praesent mattis suscipit libero, eget vestibulum mauris vulputate ac. Phasellus eleifend purus ac diam finibus, quis ullamcorper nisi mollis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+
+Nam lobortis libero eu convallis tempor. Integer elementum, libero in placerat pellentesque, risus ligula fringilla massa, vitae cursus neque mauris quis felis. Nullam ut lacus lobortis, pellentesque sapien in, mollis ante. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nulla sit amet urna nec metus accumsan suscipit dictum sit amet orci. Etiam ut nunc nec justo efficitur aliquam et sit amet mauris. Vestibulum at dui tellus. Ut a tempor dui, vitae iaculis orci. Mauris augue orci, placerat et interdum ut, luctus eu nunc. Praesent dignissim enim quam, vitae dapibus ipsum gravida sit amet. Suspendisse potenti. Quisque iaculis, ante in pharetra ultricies, risus magna sodales lorem, ac blandit sapien ante ultricies odio. Cras ut tempor lacus. Sed in diam tempor, condimentum nibh sit amet, posuere libero. In sit amet tristique leo.</p>
+                    </div>
+                </div>-->
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- JQUERY -->
+    <script src="lib/jquery-1.11.3.min.js"></script>
+    <script src="lib/angular.min.js"></script>
+    <script src="lib/bootstrap.min.js"></script>
+    <script type="text/javascript" src="main.js" charset="utf-8"></script>
+</body>
+</html>
+
