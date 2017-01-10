@@ -24,3 +24,22 @@ The challenge is to build a very simple blog with this specifications:
 
 * Use a build system for the frontend, for example [gulp](http://gulpjs.com/) or [grunt](http://gruntjs.com/).
 * Deploy the app, you can use something like [heroku](https://www.heroku.com/) or [AWS](https://aws.amazon.com/es/).
+
+
+**Proceso y selección de acciones**
+
+* He desarrollo un ejemplo / esqueleto de API CORS viendo un modelo MVC. EL modelo esta creado a nivel CORS para que pueda ser usado por otras vistas (escalabilidad), asi es más
+* fácil ir desarrollando más aplicaciones y funciones e insertarlas en el mismo CORS para aumentar la funcionalidad. Dentro del CORS esta la parte del controlador,
+* que conecta entre la vista y la persistencia. Gracias a esto se podría aislar cada controlador pero usar los mismos servicios y persistencia que varias aplicaciones.
+*
+* Para la parte de la vista he usado bootstrap 3 y angularjs para bindear los datos que se reciban del CORS. El servicio que usa es el RESTFUL y te cada llamada 
+* al CORS te devuelve un json con todos los datos.
+*
+
+**Comentarios**
+
+* Espero que este modelo os guste de desarrollo, aunque es un simple esqueleto. La máxima implementación de esta metodología puede aportar gran escalabilidad y concordancia en el código.
+* Con la creación de un API CORS además se tendría seguridad en que controladores pueden ser usados algunos métodos para diferentes clientes.
+*
+
+
